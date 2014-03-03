@@ -1,0 +1,11 @@
+---
+- name: Install Tomcat
+  connection: local
+  hosts: jenkins
+  sudo: True
+  tasks:
+  - name: Install Tomcat
+    apt: pkg=tomcat7 state=present
+
+  - name: Start or Restart Tomcat
+    service: name=tomcat7 state=running

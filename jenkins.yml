@@ -1,0 +1,8 @@
+---
+- name: Install Jenkins
+  connection: local
+  hosts: jenkins
+  sudo: True
+  roles:
+  - ansible-jenkins
+
